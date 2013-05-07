@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<link type="text/css" rel="stylesheet" href="./st_panels.css"/>
+		<script src="http://code.jquery.com/jquery-1.6.1.js" type="text/javascript"></script>
+		<script src="./st_panels.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				stPanels("stpanel.full",true,true);
+				stPanels("stpanel.inner",true,false);
+				stPanels("stpanel.expadding",false,false);
+			});
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<div id="main">
+			<div id="normalPanel">
+				<div id="innerPanel">
+					This is some content in a normal div within a semi-transparant parent div without the use of stPanels but using normal css opacity.
+					<br/><br/>
+					You can see what happens to the text and other child elements even though the child div has it's opacity reset.
+				</div>
+			</div>
+			<div class="stpanel full blue"></div>
+			<div class="content">
+				This is some content using stPanels for a semi-transparent background box
+				<br/><br/>
+				It is including padding and margins
+			</div>
+			<div class="stpanel inner red"></div>
+			<div class="content">
+				This is some more content using stPanels for a semi-transparent background box
+				<br/><br/>
+				But in this case the parameter to include margins is set to false		
+			</div>
+			<div class="stpanel expadding yellow"></div>
+			<div class="content">
+				This is some more content using stPanels for a semi-transparent background box
+				<br/><br/>
+				It has both margins and padding excluded				
+			</div>
+		</div>
+	</body>
+</html>
